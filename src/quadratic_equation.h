@@ -40,14 +40,14 @@ public:
 
 private:
     void find_roots() {
-        if(a_ == 0) {
+        if (a_ == 0) {
             double x = -c_ / b_;
             roots_.push_back(x);
             return;
         }
 
         double discriminant = b_*b_ - 4*a_ * c_;
-        if(discriminant > 0) {
+        if (discriminant > 0) {
             double x1 = (-b_ + std::sqrt(discriminant)) / (2*a_);
             double x2 = (-b_ - std::sqrt(discriminant)) / (2*a_);
             roots_.push_back(x1);
@@ -59,10 +59,12 @@ private:
     }
 
     void find_extremum() {
-        //"a" is positive, so the parabola opens upward
-        // if the parabola opens upward, you will be finding its minimum value
+        // if "a" is positive, so the parabola opens upward,
+        // if "a" is negative, then the parabola opens downward
+        // if the parabola opens upward, you will be finding its minimum value,
+        // if the parabola opens downward, you will find its maximum value
         if (a_ != 0) {
-            x_ = -b_ / 2*a_;
+            x_ = -b_ / (2*a_);
         }
     }
 

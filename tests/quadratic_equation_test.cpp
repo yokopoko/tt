@@ -6,7 +6,7 @@ TEST(QuadraticEquationTest, test_1) {
     QuadraticEquation e(3, -4, 94);
     e.calculate();
     ASSERT_EQ(e.roots().size(), 0);
-    ASSERT_EQ(e.x(), 0.66);
+    ASSERT_EQ(e.x(), 2.0/3);
 }
 
 TEST(QuadraticEquationTest, test_2) {
@@ -30,9 +30,8 @@ TEST(QuadraticEquationTest, test_3) {
 TEST(QuadraticEquationTest, test_4) {
     QuadraticEquation e(-4, 28, -49);
     e.calculate();
-    ASSERT_EQ(e.roots().size(), 2);
-    ASSERT_EQ(e.roots()[0], 3);
-    ASSERT_EQ(e.roots()[1], 5);
+    ASSERT_EQ(e.roots().size(), 1);
+    ASSERT_EQ(e.roots()[0], 3.5);
     ASSERT_EQ(e.x(), 3.5);
 }
 
@@ -55,7 +54,7 @@ TEST(QuadraticEquationTest, test_7) {
     QuadraticEquation e(2, -5, 2);
     e.calculate();
     ASSERT_EQ(e.roots().size(), 2);
-    ASSERT_EQ(e.roots()[0], 1);
+    ASSERT_EQ(e.roots()[0], 2);
     ASSERT_EQ(e.roots()[1], 0.5);
     ASSERT_EQ(e.x(), 1.25);
 }
@@ -81,7 +80,7 @@ TEST(QuadraticEquationTest, test_10) {
     QuadraticEquation e(1, 1, 1);
     e.calculate();
     ASSERT_EQ(e.roots().size(), 0);
-    ASSERT_EQ(e.x(), 2);
+    ASSERT_EQ(e.x(), -0.5);
 }
 
 TEST(QuadraticEquationTest, test_11) {
@@ -90,7 +89,7 @@ TEST(QuadraticEquationTest, test_11) {
     ASSERT_EQ(e.roots().size(), 2);
     ASSERT_EQ(e.roots()[0], 8.0/3);
     ASSERT_EQ(e.roots()[1], 0);
-    ASSERT_EQ(e.x(), 1.33);
+    ASSERT_EQ(e.x(), 4.0/3);
 }
 
 TEST(QuadraticEquationTest, test_12) {
